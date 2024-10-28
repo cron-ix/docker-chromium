@@ -5,7 +5,7 @@ FROM dtcooper/raspberrypi-os:bookworm
 RUN echo "chromiumbox" > /etc/hostname
 
 # Install chromium-browser
-RUN apt-get update && apt-get install -y chromium-browser && apt-get install -y xxd
+RUN apt-get update && apt-get install -y chromium-browser
 
 # Copy Pulseaudio config
 COPY pulse-client.conf /etc/pulse/client.conf
