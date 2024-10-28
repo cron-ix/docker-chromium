@@ -1,6 +1,6 @@
 # Chromium with Widevine in Manjaro/Arch linux
 
-Manjaro/Arch aarch64 (Raspberry Pi) has no widevine support. So I created an image from "Raspberry Pi OS" (Debian bookworm) base image, which has built-in chromium with widevine support.
+Manjaro/Arch aarch64 (Raspberry Pi 64bit) has no widevine support. So I created an image from "Raspberry Pi OS" (Debian bookworm) base image, which has built-in chromium with widevine support.
 
 Base image:
 - [Docker Hub: dtcooper/raspberrypi-os:bookworm](https://hub.docker.com/r/dtcooper/raspberrypi-os)
