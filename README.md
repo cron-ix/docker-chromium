@@ -11,22 +11,22 @@ Base image:
 ### Install Docker
 1. install at host: docker docker-buildx xorg-xhost xxd-standalone: `sudo pamac install docker docker-buildx xxd-standalone`
 1. Enable Docker service: `sudo systemctl enable --now docker.service`
-1. add Docker group: `sudo groupadd docker`
-1. add user to group: `sudo usermod -aG docker $USER`
-l. log off and back in
+1. Add Docker group: `sudo groupadd docker`
+1. Add user to group: `sudo usermod -aG docker $USER`
+l. Log off and back in
 
 ### Build image
 
-1. `git clone https://github.com/cron-ix/docker-chromium.git`
-1. `cd docker-chromium`
-1. build image: `./docker-build`
+1. Clone repo: `git clone https://github.com/cron-ix/docker-chromium.git`
+1. Change into directory: `cd docker-chromium`
+1. Build image: `./docker-build`
 
 ### Run Image
 
-1. run image using script: `./docker-chromium` or install executable script: `sudo install -m 755 ./docker-chromium /usr/local/bin`
-1. have fun
+1. Run image using script: `./docker-chromium` or install executable script: `sudo install -m 755 ./docker-chromium /usr/local/bin`
+1. Have fun
 
 ## ToDo
 
-- minimze builded image
+- Minimze builded image
 
