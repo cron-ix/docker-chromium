@@ -28,5 +28,7 @@ l. Log off and back in
 
 ## ToDo
 
-- Minimze builded image
+- Minimze builded image: Check - optimized Dockerfile to reduce filesize from 1.75 GB to 1.16 GB
+- Error warning "[53:53:1029/190930.090475:ERROR:gbm_wrapper.cc(79)] Failed to get fd for plane.: No such file or directory (2)
+[53:53:1029/190930.090656:ERROR:gbm_wrapper.cc(262)] Failed to export buffer to dma_buf: No such file or directory (2)" => Chromium starts, so warning can be ignored
 
