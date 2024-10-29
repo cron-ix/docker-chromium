@@ -2,7 +2,7 @@
 FROM dtcooper/raspberrypi-os:bookworm
 
 # Install chromium-browser
-RUN apt-get update && apt-get install -y chromium-browser
+RUN apt-get update && apt-get install --no-install-recommends chromium-browser -y
 
 # Set up hostname and the user
 ENV UNAME chromiumuser
