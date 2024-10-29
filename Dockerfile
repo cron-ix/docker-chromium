@@ -1,13 +1,12 @@
 # Start with base image
 FROM dtcooper/raspberrypi-os:bookworm
 
-# Install chromium-browser
-RUN apt-get update && apt-get install --no-install-recommends chromium-browser libwidevinecdm0 -y
+# Set up hostname and install chromium-browser
+RUN echo "chromiumbox" > /etc/hostname && apt-get update && apt-get install --no-install-recommends chromium-browser libwidevinecdm0 -y
 
-# Set up hostname and the user
+# Set up the user
 ENV UNAME chromiumuser
-RUN echo "chromiumbox" > /etc/hostname && \
-    export UNAME=$UNAME UID=1000 GID=1000 && \
+RUN export UNAME=$UNAME UID=1000 GID=1000 && \
     mkdir -p "/home/${UNAME}" && \
     echo "${UNAME}:x:${UID}:${GID}:${UNAME} User,,,:/home/${UNAME}:/bin/bash" >> /etc/passwd && \
     echo "${UNAME}:x:${UID}:" >> /etc/group && \
