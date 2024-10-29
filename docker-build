@@ -4,4 +4,4 @@
 [[ -z "${DISPLAY}" ]] && export DISPLAY=:0.0
 
 # Build image
-docker buildx build --tag cron-ix/docker-chromium:$(date '+%Y%m%d') .
+docker buildx build --no-cache --tag cron-ix/docker-chromium:$(date '+%Y%m%d') .
