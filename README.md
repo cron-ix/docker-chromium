@@ -24,11 +24,12 @@ l. Log off and back in
 ### Run Image
 
 1. Run image using script: `./docker-chromium` or install executable script: `sudo install -m 755 ./docker-chromium /usr/local/bin`
+1. If Chromium wont start, check console output. If you see an error, that the current profile is locked, just remove the volume "chromium_home"
 1. Have fun
 
 ## ToDo
 
 - Minimze builded image: Check - optimized Dockerfile to reduce filesize from 1.75 GB to 1.16 GB
-- Error warning "[53:53:1029/190930.090475:ERROR:gbm_wrapper.cc(79)] Failed to get fd for plane.: No such file or directory (2)
-[53:53:1029/190930.090656:ERROR:gbm_wrapper.cc(262)] Failed to export buffer to dma_buf: No such file or directory (2)" => Chromium starts, so warning can be ignored
+- Error warning: "[53:53:1029/190930.090475:ERROR:gbm_wrapper.cc(79)] Failed to get fd for plane.: No such file or directory (2)
+[53:53:1029/190930.090656:ERROR:gbm_wrapper.cc(262)] Failed to export buffer to dma_buf: No such file or directory (2)" => looks like a Chromium issue with hardware acceleration, but Chromium starts, so warning can be ignored
 
